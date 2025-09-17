@@ -1,4 +1,4 @@
-## Riverine Geomorphology Metrics using Google Earth Engine
+## Riverine Geomorphology Metrics using Google Earth Engine and Google colab
 This repository contains the code for a comprehensive analysis of riverine geomorphology. The project uses satellite imagery from the Landsat and Sentinel missions to calculate a range of hydraulic, geometric, and environmental metrics for key river segments over a 25-year period (2000–2024).
 
 ### 📜 Project Overview
@@ -6,29 +6,23 @@ The core objective of this project is to quantify changes in river channels over
 
 The script automates the following workflow:
 
-Image Acquisition: Access and harmonize Landsat and Sentinel data from the years 2000, 2005, 2010, 2015, 2020, and 2024.
+Image Acquisition: Access and harmonize Landsat and Sentinel data from the years 2000, 2016 and 2024.
 
-Water Classification: Employ multiple water indices, including NDWI, MNDWI, and AWEI, to accurately classify water and non-water pixels.
+Water Classification: Employ DeepLabV3, to accurately classify water and non-water pixels.
 
 Centerline Extraction: Use the Medial Axis Transform to derive the river's centerline from the classified water masks.
 
 Metric Calculation: Compute a suite of metrics at both the point and line level, including:
 
-Channel Width (m)
+Migration Rate (m/yr)
 
-Migration Rate (m)
-
-Curvature
-
-Sinuosity
-
-Stream Power (W/m)
+Curvature (1/m)
 
 Dam Distance (m)
 
-Runoff (mm)
+Coefficient of Variance (CV) Runoff (mm)
 
-EVI (Enhanced Vegetation Index)
+Enhanced Vegetation Index (EVI) change
 
 Data Export: Output the calculated metrics into a structured CSV format for further analysis and visualization.
 
